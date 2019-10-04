@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_learn/functions/file_operation.dart';
+import 'package:my_learn/functions/net_work_request.dart';
 
 void main() => runApp(MyApp());
 
@@ -53,15 +55,18 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              'teqwqwea',
-              style: Theme.of(context).textTheme.display1,
-            ),
+            FlatButton(child: Text('网络请求'), onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context){
+                return NetWorkRequestPage();
+              }));
+            },),
+             FlatButton(child: Text('文件操作'), onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context){
+                return FileOperationPage();
+              }));
+            },),
           ],
         ),
       ),
