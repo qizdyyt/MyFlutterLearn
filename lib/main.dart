@@ -1,6 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:my_learn/functions/file_operation.dart';
 import 'package:my_learn/functions/net_work_request.dart';
+import 'package:my_learn/dart_learn/one.dart';
+import 'package:my_learn/dart_learn/two.dart';
+import 'package:my_learn/dart_learn/three.dart';
+import 'package:my_learn/dart_learn/four.dart';
+/*
+1. dart的入口是main函数
+2. 在dart中打印内容使用print
+
+main() {
+  ...
+}
+
+*/
+
+/*
+完整的main函数
+
+函数的返回值类型  函数名称（参数列表） {
+  函数体
+}
+
+List-> 数组
+泛型，这个参数一般在命令行运行dart文件时传递参数使用
+void main (List<String> args) {
+
+}
+*/
+
 
 void main() => runApp(MyApp());
 
@@ -22,10 +50,77 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: MyHomePage(title: 'Flutter Demo For My Learn'),
+      home: getHome(context),//MyHomePage(title: 'Flutter Demo For My Learn'),
     );
   }
 }
+
+Widget getHome(BuildContext context) {
+
+  print("Hellow word");
+
+One.run();
+Two.run();
+Three.run();
+Four.run();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  return Scaffold(
+      appBar: AppBar(
+        title: Text('text'),
+      ),
+      body: Center(
+        child: Text('MyLearn'),
+      ),
+    );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
