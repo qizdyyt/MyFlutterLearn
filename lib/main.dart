@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_learn/functions/file_operation.dart';
+import 'package:my_learn/functions/log.dart';
 import 'package:my_learn/functions/net_work_request.dart';
 import 'package:my_learn/learn_dart/learn_dart_1.dart';
 import 'package:my_learn/learn_dart/learn_dart_2.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    Log.startWriteLog();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -58,24 +60,12 @@ class MyApp extends StatelessWidget {
 Widget getHome(BuildContext context) {
 
   print("Hellow word");
+  Log.w('get home');
 
 One.run();
 Two.run();
 Three.run();
 Four.run();
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
